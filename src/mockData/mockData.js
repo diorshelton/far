@@ -1017,3 +1017,4 @@ let bodies = [
 		rel: "https: //api.le-systeme-solaire.net/rest/bodies/daphnis",
 	},
 ];
+console.log(bodies);
