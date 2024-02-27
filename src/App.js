@@ -1,6 +1,7 @@
 import './App.css';
-import Card from './card/Card.jsx';
 import Header from './header/header';
+import Card from "./card/Card.jsx";
+
 import { bodies } from './mockData/mockData';
 
 
