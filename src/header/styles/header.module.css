@@ -9,7 +9,7 @@ body {
   display: flex;
   background-image: url("../../assets/ssd_banner.png");
   background-size: cover;
-  padding: 1rem;
+  padding: 0;
 }
 
  h1 {
@@ -18,16 +18,3 @@ body {
   font-weight: 200;
   font-size: 3rem;
  }
-
-  .menu {
-  height: 1rem;
-  align-self:center;
-  padding: 1rem
- }
-
-
-@media (min-device-width: 768px) {
-  .menu {
-    display: none;
-  }
-}

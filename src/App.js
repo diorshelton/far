@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Card data={bodies} />
+      {/* <Card data={bodies} /> */}
     </div>
   );
 }
