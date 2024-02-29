@@ -1,9 +1,9 @@
-import Reset from "../styles/Reset";
+import Reset from "../Reset";
 import Nav from "./Nav";
 
 const Layout = ({ children }) => {
 	return (
-		<>
+    <>
 			<Reset />
 			<header>
 				<Nav />

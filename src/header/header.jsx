@@ -3,8 +3,8 @@ import styles from "../header/styles/header.module.css";
 
 const Header = () => {
 	return (
-		<div className={styles.nav}>
-			<h1 className={styles.h1}>Solar System</h1>
+		<div className="nav">
+			<h1 className="h1">Solar System</h1>
 		</div>
 	);
 };
