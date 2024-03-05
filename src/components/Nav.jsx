@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import banner from '../assets/ssd_banner.png'
+import navImage from '../assets/ssd_banner.png'
+
 const StyledNav = styled.nav`
 	.nav {
-		display: flex;
-		background-image: url("../../assets/ssd_banner.png");
-		background-size: cover;
-		padding: 0;
+		/* display: flex; */
+		/* background-size: cover; */
+		/* padding: 0; */
+		background-image: url("navImage");
 	}
 
 	h1 {
@@ -14,7 +15,8 @@ const StyledNav = styled.nav`
 		font-weight: 200;
 		font-size: 3rem;
 	}
-`
+`;
+
 const Nav = () => {
   return (
 		<StyledNav>

@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
 			<Reset />
 			<header>
 				<Nav />
-			</header>
+      </header>
 			<main>{children}</main>
 		</>
 	);

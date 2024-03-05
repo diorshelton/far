@@ -8,9 +8,7 @@ import { bodies } from './mockData/mockData';
 function App() {
   return (
     <div>
-      <Layout>
-        
-      </Layout>
+      <Layout></Layout>
       {/* <Header /> */}
       {/* <Card data={bodies} /> */}
     </div>
