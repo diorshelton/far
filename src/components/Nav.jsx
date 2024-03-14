@@ -1,12 +1,14 @@
+import React from 'react';
 import styled from 'styled-components';
 import navImage from '../assets/ssd_banner.png'
 
 const StyledNav = styled.nav`
 	.nav {
-		/* display: flex; */
+		display: flex;
 		/* background-size: cover; */
 		/* padding: 0; */
-		background-image: url("navImage");
+		/* background-image: url("navImage"); */
+		background-color: red;
 	}
 
 	h1 {

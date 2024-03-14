@@ -3,16 +3,18 @@ import spaceBanner from '../assets/ssd_banner.png'
 import styled from "styled-components";
 
 const StyledBanner = styled.banner `
-  .banner {
+  .banner-container {
     background-image: url(spaceBanner);
-    background-color: green;
+    background-color: red;
   }
 `
 
 const Banner = () => {
   return (
     <StyledBanner>
-      <div className="banner">
+      <img src={spaceBanner} alt="space graphic"/>
+      <div className="banner-container">
+        <h1>Hi</h1>
       </div>
     </StyledBanner>
 	);
