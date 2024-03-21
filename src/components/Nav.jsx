@@ -5,10 +5,8 @@ import navImage from '../assets/ssd_banner.png'
 const StyledNav = styled.nav`
 	.nav {
 		display: flex;
-		/* background-size: cover; */
-		/* padding: 0; */
-		/* background-image: url("navImage"); */
-		background-color: red;
+		justify-content: center;
+		background-image: url(${navImage});
 	}
 
 	h1 {
@@ -23,6 +21,7 @@ const Nav = () => {
   return (
 		<StyledNav>
 			<div className="nav">
+				{/* <img src={navImage} alt="banner"/> */}
         <h1 className="h1">Solar System</h1>
 			</div>
 		</StyledNav>

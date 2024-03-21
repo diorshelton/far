@@ -1,15 +1,20 @@
 import Reset from "../Reset";
 import Nav from "./Nav";
+import styled from "styled-components";
+
+const StyledLayout = styled.Layout``;
 
 const Layout = ({ children }) => {
 	return (
-    <>
-			<Reset />
-			<header>
-        <Nav></Nav>
-      </header>
-			<main>{children}</main>
-		</>
+		<StyledLayout>
+			<>
+				<Reset />
+				<header>
+					<Nav></Nav>
+				</header>
+				<main>{children}</main>
+			</>
+		</StyledLayout>
 	);
 };
 
