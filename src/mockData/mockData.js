@@ -10,7 +10,7 @@ let bodies = [
 		aphelion: 1535756,
 		eccentricity: 0.123,
 		inclination: 0.43,
-		mass: [Object],
+		mass: { massExponent: 14, massValue:1.5},
 		vol: null,
 		density: 0.55,
 		gravity: 0,

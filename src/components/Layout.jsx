@@ -2,7 +2,9 @@ import Reset from "../Reset";
 import Nav from "./Nav";
 import styled from "styled-components";
 
-const StyledLayout = styled.Layout``;
+const StyledLayout = styled.div`
+
+`;
 
 const Layout = ({ children }) => {
 	return (
