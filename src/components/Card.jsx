@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../card/styles/Card.module.css";
 import styled from "styled-components";
 import { bodies } from "../mockData/mockData";
 
