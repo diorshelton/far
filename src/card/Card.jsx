@@ -1,11 +1,25 @@
-import styles from "../card/styles/Card.module.css"
-const Card = ({ data }) => {
+import React from "react";
+import styles from "../card/styles/Card.module.css";
+import styled from "styled-components";
+import { bodies } from "../mockData/mockData";
+
+const StyledCard = styled.article``;
+
+console.log(bodies);
+
+const Card = ({ data, bodyName, bodyType, volume, density, mass}) => {
 	return (
-		<div>
-      <h2 className={styles.cardName}>
-        {data.map((planet) => (planet.englishName))}
-      </h2>
-		</div>
+		<StyledCard>
+			<article className="card">
+				<h2 className="cardName">{bodyName}</h2>
+				<div className="specifications">
+					<p className="body-type">{bodyType}</p>
+					<p className="volume">{volume}</p>
+					<p className="density">{density}</p>
+					<p className="mass">{mass}</p>
+				</div>
+			</article>
+		</StyledCard>
 	);
 };
 
