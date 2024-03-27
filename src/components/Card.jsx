@@ -15,7 +15,7 @@ const StyledCard = styled.article`
 `;
 
 
-const Card = ({bodyName, bodyType, volume, density, mass}) => {
+const Card = ({bodyName, bodyType, volume, density, mass, massExponent}) => {
 	return (
 		<StyledCard>
 			<article className="card">
@@ -24,7 +24,7 @@ const Card = ({bodyName, bodyType, volume, density, mass}) => {
 					<p className="body-type">Body Type:{bodyType}</p>
 					<p className="volume">Volume:{volume}</p>
 					<p className="density">Density:{density}</p>
-					<p className="mass">Mass:</p>
+					<p className="mass">Mass:{mass}x10<sup className="mass-exponent">{massExponent}</sup>kg</p>
 				</div>
 			</article>
 		</StyledCard>

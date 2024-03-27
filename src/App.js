@@ -20,7 +20,7 @@ function App() {
 	return (
 		<>
 			<Layout>
-				<Card bodyName={bodies[0].name} bodyType={bodies[0].bodyType} volume={bodies[0].volume} density={bodies[0].density} mass={bodies[0].mass}
+				<Card bodyName={bodies[0].name} bodyType={bodies[0].bodyType} volume={bodies[0].v} density={bodies[0].density} mass={bodies[0].mass.massValue} massExponent={bodies[0].mass.massExponent}
 				/>
 				{/* {bodies.map(body =>
 					<Card key={body.id} bodyName={body.englishName}
