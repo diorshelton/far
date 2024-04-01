@@ -7,24 +7,39 @@ const StyledCard = styled.article`
 	justify-content: center;
 	align-items: center;
 	padding: 0rem 1rem;
-	width: 14.0rem;
-	height: 10.4375rem;
-	background: #908f8f;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+	width: 14rem;
+	height: 15.4375rem;
+	background: #b8b7b7;
+	box-shadow: -17px 16px 8px rgba(0, 0, 0, 0.15);
 	border-radius: 0.5rem;
+	/* remove */
+	margin: 3rem;
+	/* remove */  
+	.bodyName {
+		padding-bottom: 1.5rem;
+	}
+	.specifications p {
+		letter-spacing: .03rem;
+		padding-bottom: 0.5rem;
+
+	}
 `;
 
-
-const Card = ({bodyName, bodyType, volume, density, mass, massExponent}) => {
+const Card = ({ bodyName, bodyType, volume, density, mass, massExponent }) => {
 	return (
 		<StyledCard>
 			<article className="card">
 				<h2 className="bodyName">{bodyName}</h2>
 				<div className="specifications">
-					<p className="body-type">Body Type:{bodyType}</p>
-					<p className="volume">Volume:{volume}</p>
-					<p className="density">Density:{density}</p>
-					<p className="mass">Mass:{mass}x10<sup className="mass-exponent">{massExponent}</sup>kg</p>
+					<div className="spec-container">
+						<p className="body-type">Body Type: {bodyType}</p>
+						<p className="volume">Volume: {volume}</p>
+						<p className="density">Density: {density}</p>
+						<p className="mass">
+							Mass: {mass}x10<sup className="mass-exponent">{massExponent}</sup>
+							kg
+						</p>
+					</div>
 				</div>
 			</article>
 		</StyledCard>

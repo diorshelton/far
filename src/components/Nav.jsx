@@ -10,7 +10,7 @@ const StyledNav = styled.nav`
 	}
 
 	h1 {
-		color: rgb(245, 242, 242);
+		color: rgb(239, 198, 16);
 		align-self: center;
 		font-weight: 200;
 		font-size: 3rem;
