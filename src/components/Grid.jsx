@@ -6,8 +6,9 @@ const StyledGrid = styled.div`
 		background-color: #cea37d;
 		display: grid;
 		place-items: center;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+    
 	}
 	.contents {
 		/* justify-self: center; */

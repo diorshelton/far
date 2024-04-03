@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./components/Card.jsx";
 import Layout from "./components/Layout";
-import {bodies} from "./mockData/mockData.js"
+import { bodies } from "./mockData/mockData.js";
 import Grid from "./components/Grid.jsx";
 
 function App() {
@@ -21,7 +21,6 @@ function App() {
 	return (
 		<>
 			<Layout>
-
 				<Grid>
 					<Card
 						bodyName={bodies[0].englishName}

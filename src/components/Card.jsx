@@ -7,21 +7,18 @@ const StyledCard = styled.article`
 	justify-content: center;
 	align-items: center;
 	padding: 0rem 1rem;
-	width: 14rem;
+	width: 13rem;
 	height: 15.4375rem;
 	background: #b8b7b7;
 	box-shadow: -17px 16px 8px rgba(0, 0, 0, 0.15);
 	border-radius: 0.5rem;
-	/* remove */
-	margin: 3rem;
-	/* remove */  
+	margin: 1.5rem;
 	.bodyName {
-		padding-bottom: 1.5rem;
+		padding-bottom: 1rem;
 	}
 	.specifications p {
 		letter-spacing: .03rem;
 		padding-bottom: 0.5rem;
-
 	}
 `;
 
