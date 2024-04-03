@@ -7,11 +7,13 @@ const StyledGrid = styled.div`
 		display: grid;
 		place-items: center;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr;
+		/* grid-template-rows: 1fr 1fr 1fr 1fr; */
     
 	}
 	.contents {
-		/* justify-self: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+		place-content: center;
 	}
 `;
 

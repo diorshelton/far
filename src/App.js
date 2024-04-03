@@ -54,6 +54,14 @@ function App() {
 						mass={bodies[3].mass.massValue}
 						massExponent={bodies[3].mass.massExponent}
 					/>
+					<Card
+						bodyName={bodies[4].englishName}
+						bodyType={bodies[4].bodyType}
+						volume={bodies[4].v}
+						density={bodies[4].density}
+						mass={bodies[4].mass.massValue}
+						massExponent={bodies[4].mass.massExponent}
+					/>
 				</Grid>
 			</Layout>
 		</>
