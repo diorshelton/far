@@ -5,15 +5,24 @@ const StyledGrid = styled.div`
 	.container {
 		background-color: #cea37d;
 		display: grid;
-		place-items: center;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		/* grid-template-rows: 1fr 1fr 1fr 1fr; */
-    
+		/* place-items: center; */
+		/* grid-template-columns: repeat(3, 1fr); */
+    /* align-items: center; */
 	}
 	.contents {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-		place-content: center;
+		/* place-content: center; */
+    /* align-items: center; */
+    justify-items: center;
+    @media screen and (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: 1199px) {
+    grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    }
 	}
 `;
 
