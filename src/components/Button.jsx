@@ -2,7 +2,8 @@ import React from "react";
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  
+  padding: 0;
+  border: 0;
 `;
 
 const Button = ({bodyType})=> {
