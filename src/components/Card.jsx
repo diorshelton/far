@@ -34,12 +34,12 @@ const Card = ({ body }) => {
 							<div className="spec-container">
 								<p className="body-type">Body Type: {cb.bodyType}</p>
 									{cb.vol ? (
-										<p className ="volume" volume= {cb}>Vol:{" "+cb.vol.volValue+"x10"}<sup>{cb.vol.volExponent}</sup>KG</p> 
+										<p className ="volume" volume= {cb}>Vol:{" "+cb.vol.volValue+"km"}<sup>{cb.vol.volExponent}</sup></p> 
 									) : <p>Vol: Not available</p>}
-								<p className="density">Density: {cb.density}</p>
+								<p className="density">Density: {cb.density} g/cm<sup>3</sup></p>
 								<p className="mass">
 									{cb.mass ? (
-										<p mass= {cb}>Mass:{" "+cb.mass.massValue+"x10"}<sup className="mass-exponent">{cb.mass.massExponent}</sup>KG</p> 
+										<p mass= {cb}>Mass:{" " + cb.mass.massValue + "x10"}<sup className="mass-exponent">{cb.mass.massExponent}</sup>kg</p> 
 									) :<p> "Mass: Not available"</p>}
 								</p>
 							</div>
