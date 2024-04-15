@@ -21,6 +21,7 @@ function App() {
 	return (
 		<>
 			<Layout>
+				<Button bodyType={"All Celestial Bodies"}></Button>
 				<Button bodyType={"Planet"}></Button>
 				<Button bodyType={"Dwarf Planet"}></Button>
 				<Button bodyType={"Moon"}></Button>
