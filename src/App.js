@@ -26,6 +26,7 @@ function App() {
 				console.log(error);
 			});
 	},[]);
+
 	return (
 		<>
 			<Layout>
@@ -35,17 +36,7 @@ function App() {
 				<Button bodyType={"Asteroid"}></Button>
 				<Button bodyType={"Comet"}></Button>
 				<Grid>
-					{data.map((body) => (
-						<Card
-							key={body.id}
-							bodyName={body.englishName}
-							bodyType={body.bodyType}
-							density={body.density}
-							// volume={body.vol}
-							// mass={body.massValue}
-							// massExponent={body.massValue}
-						></Card>
-					))}
+					<Card body={data} key={data.id}></Card>
 				</Grid>
 			</Layout>
 		</>
