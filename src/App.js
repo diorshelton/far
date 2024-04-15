@@ -8,22 +8,13 @@ import Button from "./components/Button.jsx";
 function App() {
 	const [data, setData] = useState([]);
 	
-	
-	// function getMass(data){
-	// 	const massArray= [];
-	// 	massArray.push(body.mass)
-	// 	return massArray
-	// }
-	
 	useEffect(() => {
 		axios
 			.get("https://api.le-systeme-solaire.net/rest/bodies/")
 			.then((response) => {
 				setData(response.data.bodies);
-				console.log(data)
 			})
 			.catch((error) => {
-				console.log(error);
 			});
 	},[]);
 

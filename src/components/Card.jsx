@@ -1,4 +1,4 @@
-import React, { createElement } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const StyledCard = styled.article`
@@ -23,20 +23,6 @@ const StyledCard = styled.article`
 `;
 
 const Card = ({ body }) => {
-	const massWithExponent = (data) => {
-		console.log(data);
-		
-		return createElement(
-			"p",
-			{ className: "mass" },
-			`Mass:  ${data.mass.massValue}`,
-			createElement(
-				"sup",
-				{ className: "mass-exponent" },
-				`${data.mass.massExponent}`
-			)
-		);
-	};
 
 	return (
 		<>
@@ -47,12 +33,14 @@ const Card = ({ body }) => {
 						<div className="specifications">
 							<div className="spec-container">
 								<p className="body-type">Body Type: {cb.bodyType}</p>
-								<p className="volume">
-									Volume: {cb.vol ? cb.vol.volValue : "N/A"}
-								</p>
+									{cb.vol ? (
+										<p className ="volume" volume= {cb}>Vol:{" "+cb.vol.volValue+"x10"}<sup>{cb.vol.volExponent}</sup>KG</p> 
+									) : <p>Vol: Not available</p>}
 								<p className="density">Density: {cb.density}</p>
 								<p className="mass">
-									{cb.mass ? massWithExponent(cb) : "N/A"}
+									{cb.mass ? (
+										<p mass= {cb}>Mass:{" "+cb.mass.massValue+"x10"}<sup className="mass-exponent">{cb.mass.massExponent}</sup>KG</p> 
+									) :<p> "Mass: Not available"</p>}
 								</p>
 							</div>
 						</div>
