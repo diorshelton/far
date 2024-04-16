@@ -39,8 +39,8 @@ const Card = ({ body }) => {
 								<p className="density">Density: {cb.density} g/cm<sup>3</sup></p>
 								<p className="mass">
 									{cb.mass ? (
-										<p mass= {cb}>Mass:{" " + cb.mass.massValue + "x10"}<sup className="mass-exponent">{cb.mass.massExponent}</sup> kg</p> 
-									) :<p> "Mass: Not available"</p>}
+										<p className="mass" mass= {cb}>Mass:{" " + cb.mass.massValue + "x10"}<sup className="mass-exponent">{cb.mass.massExponent}</sup> kg</p> 
+									) :<p>Mass: Not available</p>}
 								</p>
 							</div>
 						</div>
