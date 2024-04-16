@@ -17,29 +17,51 @@ const StyledCard = styled.article`
 		padding-bottom: 1rem;
 	}
 	.specifications p {
-		letter-spacing: .03rem;
+		letter-spacing: 0.03rem;
 		padding-bottom: 0.5rem;
 	}
 `;
 
-const Card = ({ bodyName, bodyType, volume, density, mass, massExponent }) => {
+const Card = ({ body }) => {
 	return (
-		<StyledCard>
-			<article className="card">
-				<h2 className="bodyName">{bodyName}</h2>
-				<div className="specifications">
-					<div className="spec-container">
-						<p className="body-type">Body Type: {bodyType}</p>
-						<p className="volume">Volume: {volume}</p>
-						<p className="density">Density: {density}</p>
-						<p className="mass">
-							Mass: {mass}x10<sup className="mass-exponent">{massExponent}</sup>
-							kg
-						</p>
-					</div>
-				</div>
-			</article>
-		</StyledCard>
+		<>
+			{body.map((cb) => (
+				<StyledCard key={cb.id}>
+					<article className="card">
+						<h2 className="bodyName">{cb.englishName}</h2>
+						<div className="specifications">
+							<div className="spec-container">
+								<p className="body-type">Body Type: {cb.bodyType}</p>
+								{cb.vol ? (
+									<p className="volume" volume={cb}>
+										Vol:{" " + cb.vol.volValue + " km"}
+										<sup>{cb.vol.volExponent}</sup>
+									</p>
+								) : (
+									<p>Vol: Not available</p>
+								)}
+								<p className="density">
+									Density: {cb.density} g/cm<sup>3</sup>
+								</p>
+								<p className="mass">
+									{cb.mass ? (
+										<p className="mass" mass={cb}>
+											Mass:{" " + cb.mass.massValue + "x10"}
+											<sup className="mass-exponent">
+												{cb.mass.massExponent}
+											</sup>{" "}
+											kg
+										</p>
+									) : (
+										<p>Mass: Not available</p>
+									)}
+								</p>
+							</div>
+						</div>
+					</article>
+				</StyledCard>
+			))}
+		</>
 	);
 };
 
