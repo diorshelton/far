@@ -23,7 +23,6 @@ const StyledCard = styled.article`
 `;
 
 const Card = ({ body }) => {
-
 	return (
 		<>
 			{body.map((cb) => (
@@ -33,14 +32,29 @@ const Card = ({ body }) => {
 						<div className="specifications">
 							<div className="spec-container">
 								<p className="body-type">Body Type: {cb.bodyType}</p>
-									{cb.vol ? (
-										<p className ="volume" volume= {cb}>Vol:{" "+cb.vol.volValue+" km"}<sup>{cb.vol.volExponent}</sup></p> 
-									) : <p>Vol: Not available</p>}
-								<p className="density">Density: {cb.density} g/cm<sup>3</sup></p>
+								{cb.vol ? (
+									<p className="volume" volume={cb}>
+										Vol:{" " + cb.vol.volValue + " km"}
+										<sup>{cb.vol.volExponent}</sup>
+									</p>
+								) : (
+									<p>Vol: Not available</p>
+								)}
+								<p className="density">
+									Density: {cb.density} g/cm<sup>3</sup>
+								</p>
 								<p className="mass">
 									{cb.mass ? (
-										<p className="mass" mass= {cb}>Mass:{" " + cb.mass.massValue + "x10"}<sup className="mass-exponent">{cb.mass.massExponent}</sup> kg</p> 
-									) :<p>Mass: Not available</p>}
+										<p className="mass" mass={cb}>
+											Mass:{" " + cb.mass.massValue + "x10"}
+											<sup className="mass-exponent">
+												{cb.mass.massExponent}
+											</sup>{" "}
+											kg
+										</p>
+									) : (
+										<p>Mass: Not available</p>
+									)}
 								</p>
 							</div>
 						</div>

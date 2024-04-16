@@ -7,16 +7,15 @@ import Button from "./components/Button.jsx";
 
 function App() {
 	const [data, setData] = useState([]);
-	
+
 	useEffect(() => {
 		axios
 			.get("https://api.le-systeme-solaire.net/rest/bodies/")
 			.then((response) => {
 				setData(response.data.bodies);
 			})
-			.catch((error) => {
-			});
-	},[]);
+			.catch((error) => {});
+	}, []);
 
 	return (
 		<>
