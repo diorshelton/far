@@ -4,6 +4,7 @@ import Card from "./components/Card.jsx";
 import Layout from "./components/Layout";
 import Grid from "./components/Grid.jsx";
 import Button from "./components/Button.jsx";
+import Pagination from "./components/Pagination.jsx";
 
 function App() {
 	const [data, setData] = useState([]);
@@ -14,7 +15,9 @@ function App() {
 			.then((response) => {
 				setData(response.data.bodies);
 			})
-			.catch((error) => {});
+			.catch((error) => {
+				console.log(error)
+			});
 	}, []);
 
 	return (
@@ -26,6 +29,7 @@ function App() {
 				<Button bodyType={"Moon"}></Button>
 				<Button bodyType={"Asteroid"}></Button>
 				<Button bodyType={"Comet"}></Button>
+				<Pagination data={data}></Pagination>
 				<Grid>
 					<Card body={data} key={data.id}></Card>
 				</Grid>
