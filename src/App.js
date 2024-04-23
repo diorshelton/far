@@ -17,9 +17,6 @@ function App() {
 			.catch((error) => {});
 	}, []);
 
-	// let allCelestialBodies = JSON.stringify(data)
-	// localStorage.setItem('cbData', allCelestialBodies)
-
 	const handleClick = (event) => {
 		const newList = [...allCelestialBodies];
 		let bodyType = event.target.innerHTML;
