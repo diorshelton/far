@@ -3,33 +3,50 @@ import axios from "axios";
 import Card from "./components/Card.jsx";
 import Layout from "./components/Layout";
 import Grid from "./components/Grid.jsx";
-import Button from "./components/Button.jsx";
 import Pagination from "./components/Pagination.jsx";
 
 function App() {
 	const [data, setData] = useState([]);
+	const [allCelestialBodies, setAllCelestialBodies] = useState([]);
 
 	useEffect(() => {
 		axios
 			.get("https://api.le-systeme-solaire.net/rest/bodies/")
 			.then((response) => {
 				setData(response.data.bodies);
+				setAllCelestialBodies(response.data.bodies);
 			})
 			.catch((error) => {
 				console.log(error)
 			});
 	}, []);
 
+	const handleClick = (event) => {
+		const newList = [...allCelestialBodies];
+		let bodyType = event.target.innerHTML;
+		if (bodyType === "All Celestial Bodies") {
+			return setData(newList);
+		}
+		setData(newList.filter((item) => item.bodyType === bodyType));
+	};
+
+	function Button({ bodyType }) {
+		return <button onClick={handleClick}>{bodyType}</button>;
+	}
+
 	return (
 		<>
 			<Layout>
-				<Button bodyType={"All Celestial Bodies"}></Button>
-				<Button bodyType={"Planet"}></Button>
-				<Button bodyType={"Dwarf Planet"}></Button>
-				<Button bodyType={"Moon"}></Button>
-				<Button bodyType={"Asteroid"}></Button>
-				<Button bodyType={"Comet"}></Button>
-				<Pagination data={data}></Pagination>
+				<Button bodyType={"Moon"} onClick={handleClick}></Button>
+				<Button bodyType={"Planet"} onClick={handleClick}></Button>
+				<Button bodyType={"Dwarf Planet"} onClick={handleClick}></Button>
+				<Button bodyType={"Asteroid"} onClick={handleClick}></Button>
+				<Button bodyType={"Comet"} onClick={handleClick}></Button>
+				<Button
+					bodyType={"All Celestial Bodies"}
+					onClick={handleClick}
+				></Button>
+				<Pagination data= {data}></Pagination>
 				<Grid>
 					<Card body={data} key={data.id}></Card>
 				</Grid>
