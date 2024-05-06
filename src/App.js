@@ -3,7 +3,6 @@ import axios from "axios";
 import Card from "./components/Card.jsx";
 import Layout from "./components/Layout";
 import Grid from "./components/Grid.jsx";
-import Pagination from "./components/Pagination.jsx";
 
 function App() {
 	const [data, setData] = useState([]);
@@ -46,7 +45,6 @@ function App() {
 					bodyType={"All Celestial Bodies"}
 					onClick={handleClick}
 				></Button>
-				<Pagination data= {data}></Pagination>
 				<Grid>
 					<Card body={data} key={data.id}></Card>
 				</Grid>
