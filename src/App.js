@@ -45,8 +45,8 @@ function App() {
 					bodyType={"All Celestial Bodies"}
 					onClick={handleClick}
 				></Button>
-				<Grid>
-					<Card body={data} key={data.id}></Card>
+				<Grid data = {data}>
+					{/* <Card body={data} key={data.id}></Card> */}
 				</Grid>
 			</Layout>
 		</>

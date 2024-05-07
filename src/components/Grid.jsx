@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Pagination from "./Pagination"
+import Card from "./Card";
 
 const StyledGrid = styled.div`
 	.container {
@@ -22,11 +24,14 @@ const StyledGrid = styled.div`
 	}
 `;
 
-const Grid = ({ children }) => {
+const Grid = ({ data }) => {
 	return (
 		<StyledGrid>
+		<Pagination data={data}></Pagination>
 			<div className="container">
-				<main className="contents">{children}</main>
+				<main className="contents">
+					<Card body={data}></Card>
+				</main>
 			</div>
 		</StyledGrid>
 	);

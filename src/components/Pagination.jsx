@@ -43,6 +43,7 @@ const Pagination = ({ data }) => {
 			</li>
 		);
 	});
+	
 
 	return (
 		<>
