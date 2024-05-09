@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Card from "./components/Card.jsx";
 import Layout from "./components/Layout";
-import Grid from "./components/Grid.jsx";
+import PaginatedGrid from "./components/PaginatedGrid.jsx";
 
 function App() {
 	const [data, setData] = useState([]);
@@ -16,7 +15,7 @@ function App() {
 				setAllCelestialBodies(response.data.bodies);
 			})
 			.catch((error) => {
-				console.log(error)
+				console.log(error);
 			});
 	}, []);
 
@@ -45,9 +44,7 @@ function App() {
 					bodyType={"All Celestial Bodies"}
 					onClick={handleClick}
 				></Button>
-				<Grid data = {data}>
-					{/* <Card body={data} key={data.id}></Card> */}
-				</Grid>
+				<PaginatedGrid data = {data}></PaginatedGrid>
 			</Layout>
 		</>
 	);
