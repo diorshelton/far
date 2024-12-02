@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Card from "./components/Card.jsx";
 import Layout from "./components/Layout";
-import Grid from "./components/Grid.jsx";
+import PaginatedGrid from "./components/PaginatedGrid.jsx";
 
 function App() {
 	const [data, setData] = useState([]);
 	const [allCelestialBodies, setAllCelestialBodies] = useState([]);
+
 	useEffect(() => {
 		axios
 			.get("https://api.le-systeme-solaire.net/rest/bodies/")
@@ -14,7 +14,9 @@ function App() {
 				setData(response.data.bodies);
 				setAllCelestialBodies(response.data.bodies);
 			})
-			.catch((error) => {});
+			.catch((error) => {
+				console.log(error);
+			});
 	}, []);
 
 	const handleClick = (event) => {
@@ -42,9 +44,7 @@ function App() {
 					bodyType={"All Celestial Bodies"}
 					onClick={handleClick}
 				></Button>
-				<Grid>
-					<Card body={data} key={data.id}></Card>
-				</Grid>
+				<PaginatedGrid data={data}></PaginatedGrid>
 			</Layout>
 		</>
 	);
