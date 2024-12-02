@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Card from "./Card";
-// import Pagination from "./Pagination";
 
 const StyledGrid = styled.div`
 	.container {
@@ -47,6 +46,7 @@ const PaginatedGrid = ({ data }) => {
 	const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
 	const handlePageNumberClick = (event) => {
+    console.log(event.target)
 		setCurrentPage(Number(event.target.id));
 	};
 

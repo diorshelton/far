@@ -44,7 +44,7 @@ function App() {
 					bodyType={"All Celestial Bodies"}
 					onClick={handleClick}
 				></Button>
-				<PaginatedGrid data = {data}></PaginatedGrid>
+				<PaginatedGrid data={data}></PaginatedGrid>
 			</Layout>
 		</>
 	);
